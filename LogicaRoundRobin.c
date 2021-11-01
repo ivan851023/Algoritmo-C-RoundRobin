@@ -14,9 +14,9 @@ void main()
 for(i=0; i<NOP; i++)  
 {  
 printf("\n Ingrese el tiempo de rafaga y el de llegada[%d]\n", i+1);  
-printf(" Tiempo rafaga es : \t");  
+printf(" Tiempo Llegada es : \t");  
 scanf("%d", &at[i]);  
-printf(" \nTiempo llegada es : \t"); 
+printf(" \nTiempo Ráfaga es : \t"); 
 scanf("%d", &bt[i]);  
 temp[i] = bt[i]; 
 }  
@@ -24,7 +24,7 @@ temp[i] = bt[i];
 printf("Ingrese el quantum: \t");  
 scanf("%d", &quant);  
 
-printf("\n Proceso No \t\t Tiempo Llegada \t\t Tiempo Respuesta \t\t Tiempo Espera");  
+printf("\n Proceso No \t\t Tiempo Ráfaga \t\t Tiempo Respuesta \t\t Tiempo Espera");  
 for(sum=0, i = 0; y!=0; )  
 {  
 if(temp[i] <= quant && temp[i] > 0) 
@@ -60,9 +60,5 @@ if(temp[i] <= quant && temp[i] > 0)
     }  
 }  
 
-avg_wt = wt * 1.0/NOP;  
-avg_tat = tat * 1.0/NOP;  
-printf("\n Average Turn Around Time: \t%f", avg_wt);  
-printf("\n Average Waiting Time: \t%f", avg_tat);  
-getch();  
+ 
 }  
