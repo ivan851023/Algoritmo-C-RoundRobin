@@ -3,23 +3,23 @@
 void main() {
     int i, n, total = 0, x, counter = 0, qt;
     int wt = 0, tt = 0, at[10], bt[10], temp[10];
-    double average_wait_time, average_turnaround_time;
-    printf("Enter the number of processes : ");
+    
+    printf("Ingrese número de procesos : ");
     scanf("%d", &n);
     x = n;
     for(i = 0; i < n; i++)
     {
-        printf("\nProcess %d...\n", i + 1);
-        printf("Enter Arrival Time: ");
+        printf("\nProceso %d...\n", i + 1);
+        printf("Ingrese Tiempo Llegada: ");
         scanf("%d", &at[i]);
-        printf("Enter Burst Time: ");
+        printf("Ingrese Tiempo Ejecución: ");
         scanf("%d", &bt[i]);
         temp[i] = bt[i];
     }
-    printf("\nEnter Time Quantum: ");
+    printf("\nIngrese el Quantum: ");
     scanf("%d", &qt);
     printf("\n+-----+------------+--------------+-----------------+\n");
-    printf("| PID | BURST TIME | WAITING TIME | TURNAROUND TIME |\n");
+    printf("| P ID | T EJECUCION | T ESPERA | T RESPUESTA |\n");
     printf("+-----+------------+--------------+-----------------+\n");
     for(total = 0, i = 0; x != 0;)
     {
@@ -56,8 +56,4 @@ void main() {
                 i = 0;
         }
     }
-    average_wait_time = wt * 1.0 / n;
-    average_turnaround_time = tt * 1.0 / n;
-    printf("\nAverage Waiting Time: %lf", average_wait_time);
-    printf("\nAverage Turnaround Time: %lf\n", average_turnaround_time);
 }
